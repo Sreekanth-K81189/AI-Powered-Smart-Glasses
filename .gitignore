@@ -1,7 +1,28 @@
-﻿*.jpg
-*.png
-*.jpeg
-*.gif
-*.bmp
-images/
-photos/
+﻿# Large model weight files — download separately (see README)
+models/weights/*.pt
+models/weights/*.bin
+models/yolo/*.onnx
+models/face/*.onnx
+models/ocr_onnx/**/*.onnx
+models/*.caffemodel
+models/sign_language/*.task
+models/tessdata/
+third_party/onnxruntime-cuda/lib/*.dll
+third_party/onnxruntime-cuda/lib/*.lib
+third_party/onnxruntime-cuda/lib/*.pdb
+
+# Build artifacts
+build/
+out/
+*.exe
+*.obj
+*.o
+__pycache__/
+*.pyc
+.vs/
+*.user
+CMakeCache.txt
+CMakeFiles/
+
+# Whisper compiled binaries (submodule handles source)
+third_party/whisper.cpp/build/
