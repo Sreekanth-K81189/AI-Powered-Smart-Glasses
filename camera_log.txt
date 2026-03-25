@@ -1,0 +1,13 @@
+AudioCapture: devices=21
+AudioCapture: input[0] Microsoft Sound Mapper - Input
+AudioCapture: input[1] Microphone Array (Intel® Smart 
+AudioCapture: input[4] Primary Sound Capture Driver
+AudioCapture: input[5] Microphone Array (Intel® Smart Sound Technology for Digital Microphones)
+AudioCapture: input[9] Microphone Array (Intel® Smart Sound Technology for Digital Microphones)
+AudioCapture: input[12] PC Speaker (Realtek HD Audio 2nd output with SST)
+AudioCapture: input[13] Microphone (Realtek HD Audio Mic input)
+AudioCapture: input[16] PC Speaker (Realtek HD Audio output with SST)
+AudioCapture: input[17] Stereo Mix (Realtek HD Audio Stereo input)
+AudioCapture: input[18] Microphone Array 1 ()
+AudioCapture: input[19] Microphone Array 2 ()
+AudioCapture: input[20] Microphone Array 3 ()

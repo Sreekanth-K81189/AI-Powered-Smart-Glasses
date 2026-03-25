@@ -1,0 +1,14 @@
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\ggml-cpu.c;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\ggml-cpu\ggml-cpu.c.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\ggml-cpu.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\ggml-cpu\ggml-cpu.cpp.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\repack.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\ggml-cpu\repack.cpp.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\hbm.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\hbm.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\quants.c;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\ggml-cpu\quants.c.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\traits.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\traits.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\amx\amx.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\amx.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\amx\mmq.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\mmq.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\binary-ops.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\binary-ops.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\unary-ops.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\unary-ops.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\vec.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\vec.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\ops.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\ops.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\arch\x86\quants.c;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\ggml-cpu\arch\x86\quants.c.obj
+D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-cpu\arch\x86\repack.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.dir\Release\ggml-cpu\arch\x86\repack.cpp.obj

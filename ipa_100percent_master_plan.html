@@ -1,0 +1,318 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{padding:.75rem 0;font-family:var(--font-sans)}
+.hdr{background:var(--color-background-secondary);border-radius:var(--border-radius-lg);padding:.875rem 1.25rem;margin-bottom:.875rem}
+.stats{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.75rem}
+.stat{flex:1;min-width:58px;text-align:center}
+.sn{font-size:17px;font-weight:500;color:var(--color-text-primary)}
+.sl{font-size:10px;color:var(--color-text-secondary);margin-top:1px}
+.gbar{display:flex;align-items:center;gap:8px}
+.gl{font-size:11px;color:var(--color-text-secondary);white-space:nowrap}
+.gbg{flex:1;height:6px;background:var(--color-border-tertiary);border-radius:20px}
+.gfill{height:6px;border-radius:20px;background:linear-gradient(90deg,#1D9E75,#3B8BD4,#534AB7)}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.leg{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--color-text-secondary)}
+.ldot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+
+.ptabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:.75rem}
+.pt{padding:4px 11px;border-radius:14px;font-size:12px;cursor:pointer;border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);transition:all .15s}
+.pt.on{background:var(--color-background-info);color:var(--color-text-info);border-color:transparent;font-weight:500}
+.pt.et{border-color:var(--color-border-danger);color:var(--color-text-danger)}
+.pt.et.on{background:var(--color-background-danger)}
+
+.dchips{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:.875rem}
+.dc{padding:5px 9px;border-radius:9px;font-size:11px;cursor:pointer;border:0.5px solid var(--color-border-tertiary);background:var(--color-background-primary);color:var(--color-text-secondary);text-align:center;transition:all .15s;min-width:62px}
+.dc:hover{border-color:var(--color-border-secondary);background:var(--color-background-secondary)}
+.dc.on{border-color:var(--color-border-info);background:var(--color-background-info);color:var(--color-text-info);font-weight:500}
+.dc.edc{border-color:var(--color-border-danger)!important;background:var(--color-background-danger)!important;color:var(--color-text-danger)!important}
+.dcd{font-size:10px;font-weight:500;display:block}
+.dcn{font-size:9px;display:block;margin-top:1px;opacity:.75}
+
+.dp{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden}
+.dph{padding:10px 14px;background:var(--color-background-secondary);border-bottom:0.5px solid var(--color-border-tertiary)}
+.dpt{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.dps{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+.dpb{padding:10px 14px}
+
+.slot{border-radius:var(--border-radius-md);margin-bottom:7px;overflow:hidden}
+.sh{display:flex;align-items:flex-start;gap:8px;padding:7px 10px}
+.st{font-size:10px;font-weight:500;white-space:nowrap;margin-top:1px}
+.stag{font-size:10px;font-weight:500;padding:2px 7px;border-radius:8px;white-space:nowrap;flex-shrink:0}
+.sw{font-size:12px;font-weight:500;flex:1}
+.sb{padding:2px 10px 8px;font-size:11px;line-height:1.55;color:var(--color-text-secondary)}
+
+.sw{background:var(--color-background-info)}.sw .st,.sw .sw2{color:var(--color-text-info)}.sw .stag{background:#185FA5;color:#fff}
+.sc{background:var(--color-background-success)}.sc .st,.sc .sw2{color:var(--color-text-success)}.sc .stag{background:#3B6D11;color:#fff}
+.sg{background:var(--color-background-warning)}.sg .st,.sg .sw2{color:var(--color-text-warning)}.sg .stag{background:#854F0B;color:#fff}
+.sp{background:var(--color-background-secondary)}.sp .st{color:var(--color-text-secondary)}.sp .sw2{color:var(--color-text-primary)}.sp .stag{background:#534AB7;color:#fff}
+
+.tip{border-left:3px solid var(--color-border-info);padding:7px 10px;background:var(--color-background-info);border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;font-size:11px;color:var(--color-text-info);line-height:1.5;margin-top:8px}
+.wrn{border-left:3px solid var(--color-border-danger);padding:7px 10px;background:var(--color-background-danger);border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;font-size:11px;color:var(--color-text-danger);line-height:1.5;margin-top:8px}
+.suc{border-left:3px solid var(--color-border-success);padding:7px 10px;background:var(--color-background-success);border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;font-size:11px;color:var(--color-text-success);line-height:1.5;margin-top:8px}
+</style>
+
+<div class="wrap">
+<div class="hdr">
+  <div class="stats">
+    <div class="stat"><div class="sn">23</div><div class="sl">Days left</div></div>
+    <div class="stat"><div class="sn">Apr 14</div><div class="sl">Exam</div></div>
+    <div class="stat"><div class="sn">7–9 PM</div><div class="sl">Daily 2 hrs</div></div>
+    <div class="stat"><div class="sn">100%</div><div class="sl">Target</div></div>
+    <div class="stat"><div class="sn">₹60k</div><div class="sl">Bonus goal</div></div>
+  </div>
+  <div class="gbar">
+    <div class="gl">Mar 22</div>
+    <div class="gbg"><div class="gfill" style="width:100%"></div></div>
+    <div class="gl">Apr 14 🎯</div>
+  </div>
+  <div class="legend">
+    <div class="leg"><div class="ldot" style="background:#185FA5"></div>Watch (YouTube)</div>
+    <div class="leg"><div class="ldot" style="background:#3B6D11"></div>Code (W3Schools/IDE)</div>
+    <div class="leg"><div class="ldot" style="background:#854F0B"></div>GFG (MCQs/Quiz)</div>
+    <div class="leg"><div class="ldot" style="background:#534AB7"></div>Practice (ask me!)</div>
+  </div>
+</div>
+<div class="ptabs" id="ptabs"></div>
+<div class="dchips" id="dchips"></div>
+<div class="dp" id="dp"></div>
+</div>
+
+<script>
+const W='sw',C='sc',G='sg',P='sp';
+const TAGS={sw:'WATCH 📺',sc:'CODE ⌨️',sg:'GFG 🟢',sp:'PRACTICE 💡'};
+
+const days=[
+{n:1,date:'Mar 22',dw:'Sun',ph:1,topic:'Setup + Hello World + Java Syntax',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java Tutorial 1 Introduction"','Watch the full intro video. Note down: what is class, public static void main(String[] args), System.out.println(), why semicolons matter. Goal: understand the structure of a Java program.'],
+[C,'7:30–8:00','Open w3schools.com/java → Java Tutorial → Syntax','Type EVERY example by hand — never copy-paste. Run each one in VS Code or IntelliJ. Fix errors yourself. Install JDK if not done. This builds muscle memory.'],
+[G,'8:00–8:30','GFG: search "Introduction to Java" → read the article','Key IPA MCQ: JVM (runs bytecode) vs JRE (JVM + libraries) vs JDK (JRE + compiler). Memorize this hierarchy — it is asked directly in IPA!'],
+[P,'8:30–9:00','Ask me here: give me Day 1 Practice Problems','Write these 3 programs: 1) Print your full name. 2) Print numbers 1–10 (one per line). 3) Print "I will crack IPA 100%" 5 times. Run all three.']
+],tip:'Goal today: get Java running and print something. If your Hello World works, today is a success. Setup takes time — be patient!'},
+
+{n:2,date:'Mar 23',dw:'Mon',ph:1,topic:'Data Types + Variables + Scanner Input',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java Variables Data Types"','Learn: int, double, float, char, boolean, String. Declaration vs initialization. Type casting: (int)9.99 → 9. Range of int (-2 billion to +2 billion).'],
+[C,'7:30–8:00','w3schools.com/java/java_data_types.asp + java_type_casting.asp','Type all examples. CRITICAL: learn Scanner now — Scanner sc = new Scanner(System.in); int n = sc.nextInt(); String s = sc.next(); — EVERY IPA coding question uses this for reading input!'],
+[G,'8:00–8:30','GFG: Quiz Corner → Java → "Java Data Types Quiz" → do all questions','MCQ traps: int overflow wraps around, float vs double precision, char stores ASCII value. What is default value of int? (0). These are IPA MCQ questions!'],
+[P,'8:30–9:00','Ask me here: Day 2 Practice Problems','I give you: 1) Read 2 numbers, print sum and product. 2) Read name + age, print greeting. 3) Read radius, print area of circle (pi=3.14). Test Scanner input for all three.']
+],tip:'Scanner is used in EVERY IPA coding question to read input. Memorize: sc.nextInt(), sc.nextDouble(), sc.next(), sc.nextLine(). This is non-negotiable!'},
+
+{n:3,date:'Mar 24',dw:'Tue',ph:1,topic:'Operators + Modulo + Type Casting Traps',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java Operators tutorial"','Learn: arithmetic (+,-,*,/,%), relational (==,!=,>,<,>=,<=), logical (&&,||,!), assignment (+=,-=,*=), ternary (?:), pre vs post increment (++i vs i++).'],
+[C,'7:30–8:00','w3schools.com/java/java_operators.asp','Practice CRITICAL traps: 5/2 = 2 (integer division!), 5.0/2 = 2.5. 10%3 = 1. ++i vs i++ output difference. Type (int)(3.9+0.2) = ? These EXACT questions appear in IPA MCQs!'],
+[G,'8:00–8:30','GFG: "Java Operators Quiz" → all questions + "Java Type Conversion Quiz"','Key MCQs: operator precedence (* before +), what does i++ return (original i), what is 1/0 vs 1.0/0, char+int arithmetic. MCQ goldmine!'],
+[P,'8:30–9:00','Ask me here: Day 3 Practice Problems','I give you: 1) Calculator (all 4 ops). 2) Check divisible by 3 AND 5. 3) Extract last 2 digits of any number using %. 4) Temperature C→F converter.']
+],tip:'% (modulo) is in almost every IPA easy coding question — reverse digits, check divisibility, extract last digit. Master it: last digit of N = N%10, remove last digit = N/10.'},
+
+{n:4,date:'Mar 25',dw:'Wed',ph:1,topic:'Conditionals — if / else if / else / switch',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java if else switch case tutorial"','Learn: if, else if, else, nested if, switch-case, break in switch. When to use switch vs if-else. Understand fall-through in switch.'],
+[C,'7:30–8:00','w3schools.com/java/java_conditions.asp + java_switch.asp','Write grade calculator using if-else (A/B/C/D/F). Then rewrite using switch. Compare both approaches. Also: write nested if for quadrant of a coordinate point.'],
+[G,'8:00–8:30','GFG: Quiz Corner → "Java Control Flow Quiz" → ALL questions','TRAP: switch without break → fall-through executes all following cases! This specific scenario appears in IPA MCQ. Know exactly what prints when break is missing.'],
+[P,'8:30–9:00','Ask me here: Day 4 Practice Problems','I give you: 1) Positive/negative/zero checker. 2) Max of 3 numbers without Math.max. 3) Grade calculator. 4) Leap year check (divisible by 4 but not 100, or divisible by 400).']
+],tip:'Switch fall-through (missing break) is a guaranteed IPA MCQ trap. Learn it: without break, execution falls to the next case automatically — every case below runs!'},
+
+{n:5,date:'Mar 26',dw:'Thu',ph:1,topic:'Loops — for / while / do-while / break / continue',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java Loops for while do-while"','Learn: for loop (init;condition;update), while loop, do-while (runs at least once), break (exit loop), continue (skip this iteration), nested loops.'],
+[C,'7:30–8:00','w3schools.com/java/java_for_loop.asp + java_while_loop.asp','Write: same program (print 1–10) using all 3 loop types. Nested loop: print 5×5 star pattern. Know: do-while always runs once even if condition false — MCQ trap!'],
+[G,'8:00–8:30','GFG: "Java Loops Quiz" → ALL questions','Key MCQ: how many times does for(int i=1;i<5;i++) run? (4 times). Does do-while run if condition is false? (Yes — once). What does break inside inner loop do? (exits inner loop only).'],
+[P,'8:30–9:00','Ask me here: Day 5 Practice Problems','I give you: 1) Sum of digits of N (1234→10). 2) Factorial. 3) Fibonacci up to N. 4) Print primes up to 50. 5) REVERSE a number — this is the most common IPA easy coding question!']
+],tip:'Reverse a number algorithm: while(n>0){digit=n%10; reversed=reversed*10+digit; n=n/10;}. Memorize this! It is in almost every IPA easy coding section.'},
+
+{n:6,date:'Mar 27',dw:'Fri',ph:1,topic:'Arrays — 1D + Traversal + Sorting + IPA Pattern',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java Arrays 1D tutorial"','Learn: declare (int[] arr = new int[5]), initialize ({1,2,3,4,5}), access (arr[0]..arr[4]), traverse with for loop, arr.length (no parentheses!), enhanced for loop.'],
+[C,'7:30–8:00','w3schools.com/java/java_arrays.asp + java_arrays_sort.asp','Write: 1) Read 5 nums into array using Scanner loop. 2) Print all. 3) Find max and min. 4) Arrays.sort(arr). 5) Reverse an array. 6) Find sum and average.'],
+[G,'8:00–8:30','GFG: "Java Array Quiz" → ALL questions','MCQs: default value of int array? (0). String array? (null). arr.length vs String.length()? Accessing arr[5] when size=5? (ArrayIndexOutOfBoundsException). All IPA material!'],
+[P,'8:30–9:00','Ask me here: Day 6 — IPA Easy Q Pattern','I give you the EXACT IPA easy question: Read 5 integers and 2 limit values. Print average of numbers greater than limit1 and less than limit2. This is a real previous year IPA easy question!']
+],tip:'IPA easy question pattern with arrays: read array → apply filter condition → compute something (sum/average/count) → print result. Master this loop+condition+array pattern today!'},
+
+{n:7,date:'Mar 28',dw:'Sat',ph:1,topic:'Strings — ALL Methods (Most Tested in IPA!)',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java String methods complete"','Learn every method: length(), charAt(i), substring(s,e), indexOf(c), toUpperCase(), toLowerCase(), equals(), equalsIgnoreCase(), contains(), replace(), split(), trim(), valueOf().'],
+[C,'7:30–8:00','w3schools.com/java/java_strings.asp + java_ref_string.asp','Type every method with examples. CRITICAL: String is immutable! s.toUpperCase() does NOT change s — you must do s = s.toUpperCase(). Also: StringBuilder for efficient reversal.'],
+[G,'8:00–8:30','GFG: "Java String Quiz" → ALL string quizzes (there are multiple!)','#1 IPA MCQ TRAP: == compares references, .equals() compares content. String s1="hi"; String s2=new String("hi"); s1==s2 is FALSE. s1.equals(s2) is TRUE. Memorize this!'],
+[P,'8:30–9:00','Ask me here: Day 7 Practice Problems — all are real IPA questions!','I give you: 1) Palindrome checker. 2) Count vowels and consonants. 3) Reverse a string. 4) Count occurrences of a character. 5) Check if two strings are anagrams. ALL are real IPA easy coding patterns!']
+],tip:'== vs .equals() for Strings is the #1 most tested Java MCQ in IPA history. Answer always: use .equals() to compare content. == compares memory addresses, not values!'},
+
+// Phase 2: OOP
+{n:8,date:'Mar 29',dw:'Sun',ph:2,topic:'Classes + Objects + Methods (OOP Begins!)',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java OOP Classes Objects tutorial"','Learn: class = blueprint, object = instance. Class has: attributes (fields) + behaviors (methods). new keyword creates object on heap. Reference variable holds the address.'],
+[C,'7:30–8:00','w3schools.com/java/java_classes.asp + java_class_methods.asp','Write Car class: String color; String brand; int speed; void drive(){System.out.println(brand+" driving at "+speed);} Create 3 Car objects with different values. Call drive() on each.'],
+[G,'8:00–8:30','GFG: "Java Classes and Objects Quiz" + "Java OOP Basics Quiz"','MCQ keys: where are objects stored? (heap). Where are primitive variables stored? (stack). What is null? (reference pointing to nothing). Default value of object reference? (null).'],
+[P,'8:30–9:00','Ask me here: Day 8 Practice Problems','I give you: 1) Rectangle class (length, width, getArea(), getPerimeter()). 2) BankAccount (balance, deposit(), withdraw(), getBalance()). Create 3 objects of each, test all methods.']
+],tip:'OOP is the heart of IPA. The 35-mark coding question = build a class + add methods. Everything in Week 2 builds toward that one question. Start taking it seriously today.'},
+
+{n:9,date:'Mar 30',dw:'Mon',ph:2,topic:'Constructors + Getters + Setters — THE IPA Pattern!',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java Constructors getters setters encapsulation"','Learn: default constructor (Java creates automatically), parameterized constructor (you create). WHY private fields: prevents invalid data. Getter = read field. Setter = modify field.'],
+[C,'7:30–8:00','w3schools.com/java/java_constructors.asp + java_encapsulation.asp','Write EXACT IPA pattern: class Student{private int rollNo; private String name; private double marks; public Student(int r,String n,double m){rollNo=r;name=n;marks=m;} + ALL getters (getRollNo etc.) + ALL setters (setRollNo etc.)}. This IS the IPA hard question structure!'],
+[G,'8:00–8:30','GFG: "Java Constructor Quiz" → all questions','MCQ traps: Can constructor have return type? (No — even void makes it a method, not constructor). Can constructor be called directly? (No — only via new). What is constructor chaining? this() keyword.'],
+[P,'8:30–9:00','Ask me here: Build Employee class in IPA format','I give you the spec: private empId(int), empName(String), salary(double), department(String). Parameterized constructor + all 8 getters/setters + printDetails() method. This is literally an IPA hard question!']
+],tip:'MEMORIZE this pattern cold: private fields + parameterized constructor + getters + setters. Write it from memory in under 5 min. This skeleton alone = 20 of the 35 hard coding marks!'},
+
+{n:10,date:'Mar 31',dw:'Tue',ph:2,topic:'Encapsulation + Access Modifiers (private/public/protected)',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java Encapsulation Access Modifiers"','Learn all 4: public (accessible everywhere), private (same class only), protected (same package + subclasses), default (same package only). Which is most restrictive? (private).'],
+[C,'7:30–8:00','w3schools.com/java/java_modifiers.asp','Write 2 versions: 1) All public fields — show how they can be directly modified to invalid values. 2) Private fields + getters/setters — show how setter can validate (e.g. if salary<0 don\'t set it). See why private is always better!'],
+[G,'8:00–8:30','GFG: "Java Access Modifiers Quiz" + "Java Encapsulation Quiz" → 20+ MCQs','Key MCQs: Can private method be overridden? (No). Can subclass access private fields of parent? (No — only through public getters). What access modifier has no keyword? (default/package-private).'],
+[P,'8:30–9:00','Ask me here: Day 10 — Complete Product class','Build: class Product with private productId(int), productName(String), price(double), category(String). Constructor + all getters/setters. Add validation: setPrice() rejects values ≤ 0. printDetails() method.']
+],tip:'IPA rule: ALL fields in your coding solution MUST be private. If any field is public, you risk losing marks. Always private + public getter + public setter. No exceptions!'},
+
+{n:11,date:'Apr 1',dw:'Wed',ph:2,topic:'Inheritance + extends + super keyword',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java Inheritance extends super"','Learn: extends keyword, parent class (superclass), child class (subclass). Child inherits all public/protected members. Method overriding with @Override. super() calls parent constructor. super.method() calls parent method.'],
+[C,'7:30–8:00','w3schools.com/java/java_inheritance.asp','Write: Animal(name, makeSound()). Dog extends Animal — override makeSound() to print "Woof!". Cat extends Animal — "Meow!". Use super(name) in Dog and Cat constructors. Create objects and call makeSound() on each.'],
+[G,'8:00–8:30','GFG: "Java Inheritance Quiz" → ALL questions','MAJOR MCQ: Multiple inheritance with classes? (NO in Java!). Multiple interfaces? (YES). Order of constructors: parent constructor runs FIRST, then child. What if parent has no default constructor? (must call super() explicitly). All IPA material!'],
+[P,'8:30–9:00','Ask me here: Day 11 Practice Problems','Build: Shape(color) → Circle(radius, getArea()) and Rectangle(length, width, getArea()). Use super(color) in both. Main: create array of Shape, call getArea() on each (polymorphism preview).']
+],tip:'Java has NO multiple inheritance with classes — "class C extends A,B" is a COMPILE ERROR. But "class C implements A,B" (multiple interfaces) is fine. This is one of the most asked IPA MCQs!'},
+
+{n:12,date:'Apr 2',dw:'Thu',ph:2,topic:'Polymorphism + Abstract Class + Interface',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java Polymorphism Abstract Interface"','Overloading (same class, different params = compile-time). Overriding (parent+child, same signature = runtime). Abstract class (has abstract methods, cannot create object). Interface (all abstract by default, use implements, multiple allowed).'],
+[C,'7:30–8:00','w3schools.com/java/java_abstract.asp + java_interface.asp + java_polymorphism.asp','Write: abstract class Vehicle{abstract void fuelType();}. Car and Bike extend it. Interface Flyable{void fly();}. Plane implements Flyable. See how both work differently.'],
+[G,'8:00–8:30','GFG: "Java Polymorphism Quiz" + "Java Interface Quiz" → 30 MCQs TOTAL','MUST KNOW IPA MCQs: Can you instantiate abstract class? (NO). Interface constructor? (NO). Interface variables are? (public static final). Can interface have default methods? (YES in Java 8+). Memorize all!'],
+[P,'8:30–9:00','Ask me here: 10 IPA-style OOP output MCQs','Ask me to give you 10 tricky output-based OOP MCQs. For each: trace the code on PAPER first, predict output, THEN check. This is how you build the MCQ skill for the real exam.']
+],tip:'Output-based OOP MCQs are the hardest part of IPA MCQ section. The skill: trace code on paper line by line. Never guess. Practice this tonight — it alone gains you 5-8 marks!'},
+
+{n:13,date:'Apr 3',dw:'Fri',ph:2,topic:'ArrayList + Comparator + Sorting Objects (IPA Hard Q!)',
+slots:[
+[W,'7:00–7:30','YouTube: search "Apna College Java ArrayList Collections sort Comparator"','Learn: ArrayList<Type> list = new ArrayList<>(); add(), remove(), get(), size(), contains(). Collections.sort() for primitives. Comparator interface for sorting custom objects by any field.'],
+[C,'7:30–8:00','w3schools.com/java/java_arraylist.asp','Write: ArrayList of 5 Student objects. Sort by marks ascending: Collections.sort(list,(a,b)->Double.compare(a.getMarks(),b.getMarks())). Descending: (a,b)->Double.compare(b.getMarks(),a.getMarks()). Filter: loop + if condition.'],
+[G,'8:00–8:30','GFG: "Java Collections Quiz" → all questions','Key MCQs: ArrayList vs Array (ArrayList dynamic, resizable). ArrayList vs LinkedList (ArrayList faster random access). Collections.sort uses which sort internally? How does Comparator work?'],
+[P,'8:30–9:00','Ask me here: IPA Hard Q pattern with Player class','Build: ArrayList of 5 Player objects. Methods: 1) sort by runs ascending. 2) sort descending. 3) find player with lowest runs. 4) filter players by matchType and return list. This IS the previous year IPA question!']
+],tip:'Sorting with lambda Comparator: (a,b)->a.getRuns()-b.getRuns() for ascending. (a,b)->b.getRuns()-a.getRuns() for descending. MEMORIZE both — filtering + sorting = the IPA hard question every time!'},
+
+{n:14,date:'Apr 4',dw:'Sat',ph:2,topic:'OOP Master Day — Real IPA Previous Year Question!',
+slots:[
+[W,'7:00–7:15','YouTube: search "TCS IPA Java OOP hard coding solution" (15 min ONLY!)','Watch one solution video. Note the approach: write class → private fields → constructor → getters → setters → methods → test. This order is the key to doing it fast.'],
+[C,'7:15–8:15','Write from memory: complete Player class — REAL previous year IPA question!','class Player{private int playerId; private String playerName; private int runs; private String playerType; private String matchType; + parameterized constructor + ALL 10 getters/setters + method getPlayerWithLowestRuns(ArrayList<Player>) + method filterByMatchTypeDescending(ArrayList<Player>,String)}. Full solution from scratch, no help!'],
+[G,'8:15–8:45','GFG: practice.geeksforgeeks.org → Java → filter Medium OOP → do 2 problems','After Player class, practice 2 more OOP problems on GFG Medium level. This pushes you beyond IPA level — if you can do GFG Medium, IPA Hard becomes easy.'],
+[P,'8:45–9:00','Share your Player class code here — I will score it out of 35 IPA marks!','I will check every detail: private fields? correct constructor? all getters/setters present? method logic correct? edge cases handled? I will give you an IPA score and tell you EXACTLY what to fix before exam.']
+],tip:'This is the single most important practice day. Can you write the complete Player class + all methods from memory in under 20 minutes? If yes → 35/35 in IPA coding is yours. Test yourself!'},
+
+// Phase 3: Topics + Practice
+{n:15,date:'Apr 5',dw:'Sun',ph:3,topic:'Exception Handling + Math Class + String.format()',
+slots:[
+[W,'7:00–7:25','YouTube: search "Apna College Java Exception Handling try catch throw"','Learn: try-catch-finally, throw (manually throw exception), throws (declare in method). Common exceptions: NullPointerException, ArrayIndexOutOfBoundsException, NumberFormatException, ClassCastException.'],
+[C,'7:25–7:55','w3schools.com/java/java_try_catch.asp + java_ref_math.asp','Write try-catch programs. Math class: Math.max(a,b), Math.min(a,b), Math.abs(x), Math.pow(2,10)=1024, Math.sqrt(16)=4, Math.round(3.7)=4, Math.floor(3.9)=3, Math.ceil(3.1)=4. These appear in MCQs!'],
+[G,'7:55–8:30','GFG: "Java Exception Handling Quiz" → 20+ MCQs','Key MCQs: parent of all exceptions? (Throwable). Checked vs unchecked? (checked: must handle; unchecked: RuntimeException subclasses). When does finally NOT run? (System.exit() call). IPA MCQ material!'],
+[P,'8:30–9:00','Ask me here: 10 Exception + Math MCQs in IPA format','Ask me for 10 IPA-style exception + Math class output MCQs. Also: add try-catch to your Player class from Day 14 to handle empty list edge cases — good coding practice!']
+],tip:'Exception handling = 2-3 guaranteed MCQ marks with just 1 hour of study. Also: adding try-catch to your IPA coding solution demonstrates good Java practice and may earn you bonus consideration.'},
+
+{n:16,date:'Apr 6',dw:'Mon',ph:3,topic:'Unix Commands + SQL Basics — Easy 10 marks!',
+slots:[
+[W,'7:00–7:25','YouTube: search "Linux Unix commands for beginners" + "SQL SELECT WHERE tutorial"','Unix top 15: ls, cd, pwd, mkdir, rm, rmdir, cat, grep, chmod, echo, touch, cp, mv, man, ps. SQL: SELECT, FROM, WHERE, ORDER BY, GROUP BY, HAVING, COUNT(), SUM(), AVG(), JOINs.'],
+[C,'7:25–7:55','w3schools.com/sql/sql_select.asp → work through SQL tutorial','Read and understand (no install needed): SELECT * FROM students; SELECT name FROM students WHERE marks>60 ORDER BY marks DESC; SELECT dept,COUNT(*) FROM emp GROUP BY dept HAVING COUNT(*)>2; Write these on paper.'],
+[G,'7:55–8:30','GFG: search "Unix commands quiz" AND "SQL MCQ questions" → 25 combined MCQs','Unix traps: grep searches text in file. chmod 755 = rwxr-xr-x. rm -r removes directories. SQL: WHERE filters ROWS before grouping, HAVING filters GROUPS after GROUP BY. These are exact IPA MCQ questions!'],
+[P,'8:30–9:00','Ask me here: 15 Unix + 10 SQL MCQs in IPA format','Ask me to fire 25 MCQs at you. These are easy, predictable, repeating questions. 2 hours of today = full 10 marks on exam day. Do not skip this!']
+],tip:'Unix + SQL = 10 marks with ZERO Java. Study today and you walk into IPA knowing you already have 10 marks secured before even touching Java questions. Highest ROI per minute!'},
+
+{n:17,date:'Apr 7',dw:'Tue',ph:3,topic:'KYT + Aptitude + BizSkill — 20 Free marks!',
+slots:[
+[W,'7:00–7:20','YouTube: search "TCS KYT questions answers 2024 2025"','Watch a KYT prep video. Note: TCS founded 1968 by J.R.D. Tata, HQ Mumbai, CEO (check latest — K Krithivasan as of 2025), 55+ countries, 600k+ employees, listed BSE/NSE.'],
+[C,'7:20–7:50','Read TCS.com/who-we-are + Google "TCS awards achievements 2024 2025"','Write 20 KYT facts on paper: Tata group companies (TCS, Tata Motors, Tata Steel, Air India, JLR, Titan, Voltas, Tata Play), TCS revenue rank in India, recent awards, major products (TCS BaNCS, iON). Review before sleeping!'],
+[G,'7:50–8:20','GFG: Aptitude section → Number Series + Percentages + Ratios → 20 MCQs','Most common IPA aptitude types: 1) Find next in number series (2,4,8,16,?=32). 2) Percentage calculation. 3) Ratio & proportion. 4) Simple interest = PRT/100. Do 5 questions of each type.'],
+[P,'8:20–9:00','Ask me here: 10 KYT + 10 BizSkill MCQs','Ask me for KYT questions (TCS history, Tata group) + BizSkill MCQs (professional email format, workplace communication, meeting etiquette, business terms). These are very straightforward common-sense questions!']
+],tip:'KYT(5) + Aptitude + BizSkill(15) = 20 marks needing ZERO Java knowledge. Study today and those 20 marks are in the bag. Combined with Unix+SQL(10) = 30 marks secured before Java questions start!'},
+
+{n:18,date:'Apr 8',dw:'Wed',ph:3,topic:'Java MCQ Blast — Basics (50 Questions Target!)',
+slots:[
+[W,'7:00–7:00','No video today — 100% pure MCQ practice mode!','Zero time on watching. Every single minute goes into answering MCQs. Goal: 50 Java basics MCQs in 120 minutes = same pace as IPA exam (1 min per question).'],
+[C,'7:00–7:45','GFG: Quiz Corner → Java → ALL basic quizzes sequentially','Do in order: Data Types Quiz → Variables Quiz → Operators Quiz → Control Flow Quiz → Arrays Quiz → Strings Quiz. Write your score for each quiz. Target: 80%+ per topic.'],
+[G,'7:45–8:30','IndiaBix: indiabix.com/java-programming/questions-and-answers → 30 MCQs','Different source = different questions = better coverage. IndiaBix has a unique set of Java MCQs not on GFG. Do 30 more. Track score per section.'],
+[P,'8:30–9:00','Review every wrong answer — ask me to explain any you don\'t understand','For every wrong MCQ: ask me "Why is the answer X and not Y?". Understanding mistakes is 3x more valuable than getting more questions right. This is how you convert 70% → 90%.']
+],tip:'Write your total score today. Any topic below 75% → add it to your revision list for Day 22. Honest tracking now = higher marks on Apr 14. No excuses with yourself!'},
+
+{n:19,date:'Apr 9',dw:'Thu',ph:3,topic:'Java MCQ Blast — OOP (Output-Based MCQs!)',
+slots:[
+[W,'7:00–7:00','No video — pure OOP MCQ practice. Focus: output-based "what does this print?" questions.','These are the hardest IPA MCQs. The skill: trace code on paper, step by step. Never guess. Budget extra time: 2 min per output question.'],
+[C,'7:00–7:45','GFG: Quiz Corner → Java → ALL OOP quizzes','Do: Classes Quiz → Inheritance Quiz → Polymorphism Quiz → Interface Quiz → Abstract Class Quiz → Encapsulation Quiz. Trace EVERY output question on paper before clicking.'],
+[G,'7:45–8:20','IndiaBix: Java OOP section → all MCQs available','Focus on: constructor chaining questions, method overriding vs overloading output, what happens with super(), interface + multiple implementation output. Hardest MCQs here.'],
+[P,'8:20–9:00','Ask me here: 10 ultra-tricky OOP output MCQs','Ask me for 10 IPA-grade tricky OOP output questions. For each wrong answer: ask me to trace through the code with you, line by line, variable by variable. This is how you crack the hardest MCQs.']
+],tip:'For output MCQs: write the code on paper → trace each line → write variable values → predict output → THEN check. Never click immediately. This discipline alone can earn you 8+ extra marks!'},
+
+{n:20,date:'Apr 10',dw:'Fri',ph:3,topic:'IPA Easy Coding — 5 Real Problems, Timed at 20 min each',
+slots:[
+[W,'7:00–7:12','YouTube: search "TCS IPA easy coding Java solution 2024" (12 min ONLY!)','Watch ONE solution. Note: how they read input with Scanner, how they structure the solution, how they check test cases. 12 min max then code.'],
+[C,'7:12–8:32','Solve 5 IPA easy problems — 20 min timer for each one!','1) Average of nums between two limits. 2) Reverse a number. 3) Count vowels and consonants in string. 4) Palindrome checker. 5) Second largest element in array. Timer per question. MUST pass all 4 test cases for full marks!'],
+[G,'8:32–8:50','GFG: practice.geeksforgeeks.org → Java → Easy → 2 more easy problems','Pick 2 unseen easy Java problems. Solve under 20 min each. Building speed and confidence is the goal.'],
+[P,'8:50–9:00','Share your slowest solution here — I will optimize it','Tell me which problem took longest. Share your code. I will show you the cleaner, faster approach that passes all IPA test cases first time.']
+],tip:'IPA time: 70 min for 2 problems. Easy = 20 min target. Hard = 45 min target. If ANY of today\'s 5 problems takes you over 20 min — that is a weak point to fix before Apr 14!'},
+
+// Phase 4: Mock Tests
+{n:21,date:'Apr 11',dw:'Sat',ph:4,topic:'IPA Hard OOP Coding — 2 Full Problems Timed',
+slots:[
+[W,'7:00–7:10','YouTube: search "TCS IPA Java hard coding OOP 2024 solution" (10 min only)','Quick 10 min video to warm up. Note their approach: class first → fields → constructor → getters/setters → methods. Then close YouTube and code immediately.'],
+[C,'7:10–8:30','Solve 2 full IPA-style OOP problems — 40 minutes each, strictly timed!','Problem 1 (40 min): Employee class — private empId, empName, salary, department. Constructor + all getters/setters. Methods: findHighestSalary(), filterByDept(String dept), sortBySalaryDescending(). Problem 2 (40 min): Student class — id, name, marks, stream. Methods: findTopper(), filterPassing(int cutoff), sortByMarksDescending().'],
+[G,'8:30–8:50','GFG: practice.geeksforgeeks.org → Java → Medium → 1 OOP problem','Push beyond IPA level. GFG Medium OOP = harder than IPA Hard. If you can do this, IPA Hard feels easy.'],
+[P,'8:50–9:00','Share your Employee or Student class here — I will score it out of 35!','I check: all fields private? constructor correct? all getters/setters? method logic produces correct output? edge cases (empty list)? I give you a precise IPA score and tell you what to fix.']
+],tip:'If you write a full OOP class with correct sorting and filtering in under 40 min with correct output — you WILL get 35/35 in IPA. This is your hardest practice day. Give it everything you have!'},
+
+{n:22,date:'Apr 12',dw:'Sun',ph:4,topic:'Full Mock Test — Simulate Real IPA Exactly (120 min)',
+slots:[
+[W,'7:00–7:05','Set a strict 120-minute timer. No phone. No internet except exam sources. Begin.','This is not practice. This IS IPA. Same conditions, same pressure, same time limit. Your score today is your predicted Apr 14 score.'],
+[C,'7:05–7:55','MCQ Section — 50 minutes, 50 questions total in IPA order','KYT: 5 questions from your notes (5 min). Java MCQs: 20 from GFG saved quiz (20 min). Unix/SQL: 10 from GFG (9 min). Aptitude/BizSkill: 15 from IndiaBix (16 min). Skip uncertain ones and return.'],
+[G,'7:55–9:00','Coding Section — 65 minutes: Easy (20 min) + Hard OOP (45 min)','Easy: Read array of 10 numbers, print count and sum of prime numbers in it. Hard OOP: Book class — private bookId, title, author, genre, price. Constructor + getters/setters. Methods: filterByGenre(String), findMostExpensive(), sortByPriceAscending(). Test all 4 cases.'],
+[P,'After 9 PM','Score yourself — send me your score and I will tell you what to revise tomorrow','MCQ: count right/wrong per section. Coding: how many test cases passed? Total out of 100. Share your score with me in chat — I will give you a precise revision plan for Day 23 morning.']
+],tip:'Target: 85+ in Mock 1. Every mark you drop = one topic to fix on Day 23 morning. If you score 80-85, you are perfectly on track. Be brutally honest with your score — no rounding up!'},
+
+{n:23,date:'Apr 13',dw:'Mon',ph:4,topic:'Final Polish + Light Revision + REST for Tomorrow',
+slots:[
+[W,'7:00–7:20','Revise ONLY the weak topics from Mock 1 — 20 min max per topic, no more','If you dropped OOP MCQ marks: rewrite the class template from memory. If String marks: do 10 String MCQs. If aptitude: do 10 aptitude questions. ONLY weak areas. Absolutely no new topics!'],
+[C,'7:20–7:45','Light quick mock: 30 MCQs in 25 minutes only (timed)','GFG: open any 30 Java MCQs across all topics. Just 30. Stay mentally sharp without exhausting yourself. Write your score.'],
+[G,'7:45–8:00','Write from memory on paper (no computer!): OOP template + String methods + KYT facts','Write: complete class template (private fields, constructor, all getters, method skeleton). Then: 8 String method signatures from memory. Then: 10 KYT facts. These become your mental anchors for tomorrow.'],
+[P,'8:00–9:00','STOP STUDYING. Pack bag. Prepare logistics. Rest your brain.','Pack: printed admit card, Aadhar/photo ID, pen (2 pens), water bottle. Google the ION center: get exact address, travel time, check if you need to leave early. Eat a proper dinner. No screens after 9:30 PM. Sleep by 10:30 PM!']
+],tip:'DO NOT study new topics today. DO NOT do another full mock. Your brain needs consolidation sleep — studies show performance drops significantly when sleep-deprived. Rest IS your final revision. Trust 22 days of work!'},
+];
+
+const examDay={n:24,date:'Apr 14',dw:'Tue',ph:5,topic:'EXAM DAY — Execute Every Part of Your Plan!',
+slots:[
+[W,'6:00–7:30','Morning: light breakfast + 20 min ONLY of light revision','Glance at: OOP class template structure. Top 5 String methods. 10 KYT facts. Unix top 10 commands. Nothing else. No new problems. Eat a proper breakfast — your brain needs glucose to perform.'],
+[C,'By exam time','Reach ION center 30 minutes before exam start time','Carry: printed admit card, Aadhar/photo ID, 2 pens, water bottle. No mobile phone inside, no smartwatch. Arriving early = calm mind = better performance. Rushing = panic = mistakes.'],
+[G,'MCQ (50 min)','Strategy order: KYT → BizSkill → Unix/SQL → Java MCQs (hardest last!)','KYT: 5 questions, 4 min — easiest, do first. BizSkill/Comm: 15 questions, 12 min. Unix/SQL: 10 questions, 9 min. Java MCQs: 20 questions, 25 min — hardest, most time. Skip unsure ones and return. Max 1 min per question!'],
+[P,'Coding (70 min)','Strategy: Easy Q first (20 min) → Hard OOP Q (45 min) → 5 min buffer','EASY (20 min): Read all 4 test cases first → code → verify all 4 → submit. HARD OOP (45 min): 1) Write class + private fields (2 min). 2) Add constructor (2 min). 3) Add all getters/setters (5 min). 4) Write method logic (25 min). 5) Test all 4 cases (8 min). 6) Fix bugs (3 min). Even 2/4 test cases = partial marks worth 17+ marks!']
+],tip:'You have prepared for 23 days, 2 hours every day. You know Java basics, OOP, arrays, strings, exceptions, Unix, SQL, aptitude, KYT. You are ready. Take a deep breath before coding. Read every question carefully. Score 80+ = ₹60,000 joining bonus. You have got this — now go prove it!'},
+
+];
+
+const allDays=[...days,examDay];
+let cp=1,cd=1;
+
+function renderPhases(){
+  const pn=[{id:1,l:'Phase 1 — Basics'},{id:2,l:'Phase 2 — OOP'},{id:3,l:'Phase 3 — Practice'},{id:4,l:'Phase 4 — Mock'},{id:5,l:'Exam Day ⭐'}];
+  document.getElementById('ptabs').innerHTML=pn.map(p=>`<button class="pt${p.id===5?' et':''}${p.id===cp?' on':''}" onclick="sp(${p.id})">${p.l}</button>`).join('');
+}
+
+function renderDays(){
+  const pd=allDays.filter(d=>d.ph===cp);
+  document.getElementById('dchips').innerHTML=pd.map(d=>`<div class="dc${d.ph===5?' edc':''}${d.n===cd?' on':''}" onclick="sd(${d.n})"><span class="dcd">${d.date}</span><span class="dcn">Day ${d.n}</span></div>`).join('');
+}
+
+function renderDetail(){
+  const d=allDays.find(x=>x.n===cd);
+  if(!d)return;
+  const slots=d.slots.map(([type,time,what,detail])=>`
+    <div class="slot ${type}">
+      <div class="sh"><span class="st">${time}</span><span class="stag">${TAGS[type]}</span><span class="sw2">${what}</span></div>
+      <div class="sb">${detail}</div>
+    </div>`).join('');
+  const tipCls=d.n===23?'wrn':d.n===24?'suc':'tip';
+  document.getElementById('dp').innerHTML=`
+    <div class="dph">
+      <div class="dpt">Day ${d.n} — ${d.topic}</div>
+      <div class="dps">${d.date} (${d.dw||''})${d.n<24?' · 7:00–9:00 PM · 2 hours · Stick to schedule!':' · EXAM DAY'}</div>
+    </div>
+    <div class="dpb">${slots}<div class="${tipCls}">${d.tip}</div></div>`;
+}
+
+function sp(p){cp=p;const pd=allDays.filter(d=>d.ph===p);cd=pd[0].n;renderPhases();renderDays();renderDetail();}
+function sd(n){cd=n;renderDays();renderDetail();}
+
+renderPhases();renderDays();renderDetail();
+</script>

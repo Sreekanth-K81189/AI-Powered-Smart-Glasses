@@ -1,0 +1,7 @@
+[Camera] startFeed called
+[Camera] No ESP32 URL, going straight to USB...
+[Camera] Scanning USB (DSHOW) indices 0-5...
+[Camera] Trying USB index=0 DSHOW
+[Camera] USB index=0 OK (1280x720)
+[Camera] Feed started successfully
+[Camera] Capture loop ended

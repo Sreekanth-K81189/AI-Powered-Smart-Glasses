@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+D:/Final Year Project/third_party/whisper.cpp/src/CMakeLists.txt
+D:/New folder/CMake/share/cmake-4.2/Modules/CheckCSourceCompiles.cmake
+D:/New folder/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake
+D:/New folder/CMake/share/cmake-4.2/Modules/CheckLibraryExists.cmake
+D:/New folder/CMake/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake
+D:/New folder/CMake/share/cmake-4.2/Modules/FindPackageMessage.cmake
+D:/New folder/CMake/share/cmake-4.2/Modules/FindThreads.cmake

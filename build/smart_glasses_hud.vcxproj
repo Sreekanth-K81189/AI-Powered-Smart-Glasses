@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BB38C20E-D92A-361D-ABC5-D2F9C710C18A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>smart_glasses_hud</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Final Year Project\build\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">smart_glasses_hud.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">smart_glasses_hud</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Final Year Project\build\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">smart_glasses_hud.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">smart_glasses_hud</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Final Year Project\build\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">smart_glasses_hud.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">smart_glasses_hud</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Final Year Project\build\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">smart_glasses_hud.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">smart_glasses_hud</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include/opencv4" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/include" /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include" /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include/eigen3" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;MODELS_PATH="D:/Final Year Project/models";TESSDATA_PATH="D:/Final Year Project/models/tessdata";WHISPER_MODEL_PATH="D:/Final Year Project/third_party/whisper.cpp/models/ggml-small.en.bin";HAVE_TESSERACT=1;HAVE_ONNXRUNTIME=1;HAS_WHISPER=1;HAVE_PORTAUDIO=1;USE_LIBSAMPLERATE=1;USE_CUDA;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;USE_CUDA=1;GLFW_DLL;TESS_IMPORTS;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;CLI11_COMPILE;GGML_USE_CPU;GGML_SHARED;GGML_BACKEND_SHARED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;MODELS_PATH=\"D:/Final Year Project/models\";TESSDATA_PATH=\"D:/Final Year Project/models/tessdata\";WHISPER_MODEL_PATH=\"D:/Final Year Project/third_party/whisper.cpp/models/ggml-small.en.bin\";HAVE_TESSERACT=1;HAVE_ONNXRUNTIME=1;HAS_WHISPER=1;HAVE_PORTAUDIO=1;USE_LIBSAMPLERATE=1;USE_CUDA;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;USE_CUDA=1;GLFW_DLL;TESS_IMPORTS;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;CLI11_COMPILE;GGML_USE_CPU;GGML_SHARED;GGML_BACKEND_SHARED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\opencv4;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\opencv4;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>						Copying scripts and models to output directory</Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "D:/Final Year Project/deps/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary "D:/Final Year Project/build/bin/Debug/smart_glasses_hud.exe" -installedDir "D:/Final Year Project/deps/vcpkg/installed/x64-windows/debug/bin" -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying ONNX Runtime GPU DLLs..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime_providers_cuda.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime_providers_shared.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy "D:/Final Year Project/Run_SmartGlassesHUD.ps1" "D:/Final Year Project/build/bin/Debug/Run_SmartGlassesHUD.ps1"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy "D:/Final Year Project/Run_SmartGlassesHUD.bat" "D:/Final Year Project/build/bin/Debug/Run_SmartGlassesHUD.bat"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying CUDA runtime DLLs for ORT GPU..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cudart64_12.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cublas64_12.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cublasLt64_12.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cufft64_11.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/curand64_10.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cusolver64_11.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cusparse64_12.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvrtc64_120_0.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvrtc-builtins64_126.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvJitLink_120_0.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying cuDNN DLLs for ORT GPU..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn64_9.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn_ops64_9.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn_cnn64_9.dll" "D:/Final Year Project/build/bin/Debug/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy_directory "D:/Final Year Project/scripts" "D:/Final Year Project/build/bin/Debug/scripts"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_directory "D:/Final Year Project/models" "D:/Final Year Project/build/bin/Debug/models"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_stitching4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_alphamat4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_aruco4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_bgsegm4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_bioinspired4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_ccalib4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudabgsegm4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudafeatures2d4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudaobjdetect4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudastereo4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_dnn_objdetect4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_dnn_superres4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_dpm4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_face4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_fuzzy4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_hfs4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_img_hash4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_intensity_transform4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_line_descriptor4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_mcc4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_rapid4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_reg4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_saliency4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_signal4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_stereo4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_structured_light4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_superres4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_surface_matching4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_tracking4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_videostab4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_wechat_qrcode4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_xfeatures2d4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_xobjdetect4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_xphoto4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\glfw3dll.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\glad.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\glm.lib;opengl32.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\tesseract55d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\spdlogd.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\cpr.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\libssl.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\libcrypto.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\sqlite3.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\zstd.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\CLI11.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\fmtd.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\portaudio.lib;D:\Final Year Project\third_party\onnxruntime-cuda\lib\onnxruntime.lib;third_party\whisper.cpp\src\Debug\whisper.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cudart_static.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_shape4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_highgui4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_datasets4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_ml4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_plot4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_phase_unwrapping4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudacodec4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_videoio4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudaoptflow4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudalegacy4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudawarping4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_optflow4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_ximgproc4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_video4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_imgcodecs4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_objdetect4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_calib3d4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_dnn4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_features2d4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_flann4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_photo4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudaimgproc4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudafilters4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_imgproc4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudaarithm4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_core4d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\opencv_cudev4d.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppial.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppitc.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppig.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppist.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppidei.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublasLt.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cufft.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppicc.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppif.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppim.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppc.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\freetyped.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\archive.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\leptonica-1.87.0d.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\debug\lib\libcurl-d.lib;winmm.lib;dsound.lib;ole32.lib;uuid.lib;setupapi.lib;ole32.lib;uuid.lib;setupapi.lib;third_party\whisper.cpp\ggml\src\Debug\ggml.lib;third_party\whisper.cpp\ggml\src\Debug\ggml-cpu.lib;third_party\whisper.cpp\ggml\src\Debug\ggml-base.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Final Year Project/build/Debug/smart_glasses_hud.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Final Year Project/build/bin/Debug/smart_glasses_hud.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include/opencv4" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/include" /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include" /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include/eigen3" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;MODELS_PATH="D:/Final Year Project/models";TESSDATA_PATH="D:/Final Year Project/models/tessdata";WHISPER_MODEL_PATH="D:/Final Year Project/third_party/whisper.cpp/models/ggml-small.en.bin";HAVE_TESSERACT=1;HAVE_ONNXRUNTIME=1;HAS_WHISPER=1;HAVE_PORTAUDIO=1;USE_LIBSAMPLERATE=1;USE_CUDA;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;USE_CUDA=1;GLFW_DLL;TESS_IMPORTS;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;CLI11_COMPILE;GGML_USE_CPU;GGML_SHARED;GGML_BACKEND_SHARED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;MODELS_PATH=\"D:/Final Year Project/models\";TESSDATA_PATH=\"D:/Final Year Project/models/tessdata\";WHISPER_MODEL_PATH=\"D:/Final Year Project/third_party/whisper.cpp/models/ggml-small.en.bin\";HAVE_TESSERACT=1;HAVE_ONNXRUNTIME=1;HAS_WHISPER=1;HAVE_PORTAUDIO=1;USE_LIBSAMPLERATE=1;USE_CUDA;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;USE_CUDA=1;GLFW_DLL;TESS_IMPORTS;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;CLI11_COMPILE;GGML_USE_CPU;GGML_SHARED;GGML_BACKEND_SHARED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\opencv4;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\opencv4;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>						Copying scripts and models to output directory</Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "D:/Final Year Project/deps/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary "D:/Final Year Project/build/bin/Release/smart_glasses_hud.exe" -installedDir "D:/Final Year Project/deps/vcpkg/installed/x64-windows/bin" -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying ONNX Runtime GPU DLLs..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime_providers_cuda.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime_providers_shared.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy "D:/Final Year Project/Run_SmartGlassesHUD.ps1" "D:/Final Year Project/build/bin/Release/Run_SmartGlassesHUD.ps1"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy "D:/Final Year Project/Run_SmartGlassesHUD.bat" "D:/Final Year Project/build/bin/Release/Run_SmartGlassesHUD.bat"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying CUDA runtime DLLs for ORT GPU..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cudart64_12.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cublas64_12.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cublasLt64_12.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cufft64_11.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/curand64_10.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cusolver64_11.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cusparse64_12.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvrtc64_120_0.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvrtc-builtins64_126.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvJitLink_120_0.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying cuDNN DLLs for ORT GPU..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn64_9.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn_ops64_9.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn_cnn64_9.dll" "D:/Final Year Project/build/bin/Release/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy_directory "D:/Final Year Project/scripts" "D:/Final Year Project/build/bin/Release/scripts"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_directory "D:/Final Year Project/models" "D:/Final Year Project/build/bin/Release/models"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_stitching4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_alphamat4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_aruco4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_bgsegm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_bioinspired4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_ccalib4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudabgsegm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudafeatures2d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaobjdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudastereo4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dnn_objdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dnn_superres4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dpm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_face4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_fuzzy4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_hfs4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_img_hash4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_intensity_transform4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_line_descriptor4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_mcc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_rapid4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_reg4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_saliency4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_signal4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_stereo4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_structured_light4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_superres4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_surface_matching4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_tracking4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_videostab4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_wechat_qrcode4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_xfeatures2d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_xobjdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_xphoto4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\glfw3dll.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\glad.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\glm.lib;opengl32.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\tesseract55.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\spdlog.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\cpr.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\libssl.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\libcrypto.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\sqlite3.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\zstd.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\CLI11.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\fmt.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\portaudio.lib;D:\Final Year Project\third_party\onnxruntime-cuda\lib\onnxruntime.lib;third_party\whisper.cpp\src\Release\whisper.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cudart_static.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_shape4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_highgui4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_datasets4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_ml4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_plot4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_phase_unwrapping4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudacodec4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_videoio4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaoptflow4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudalegacy4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudawarping4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_optflow4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_ximgproc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_video4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_imgcodecs4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_objdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_calib3d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dnn4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_features2d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_flann4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_photo4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaimgproc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudafilters4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_imgproc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaarithm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_core4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudev4.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppial.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppitc.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppig.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppist.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppidei.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublasLt.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cufft.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppicc.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppif.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppim.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppc.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\freetype.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\archive.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\leptonica-1.87.0.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\libcurl.lib;winmm.lib;dsound.lib;ole32.lib;uuid.lib;setupapi.lib;ole32.lib;uuid.lib;setupapi.lib;third_party\whisper.cpp\ggml\src\Release\ggml.lib;third_party\whisper.cpp\ggml\src\Release\ggml-cpu.lib;third_party\whisper.cpp\ggml\src\Release\ggml-base.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Final Year Project/build/Release/smart_glasses_hud.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Final Year Project/build/bin/Release/smart_glasses_hud.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include/opencv4" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/include" /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include" /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include/eigen3" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;MODELS_PATH="D:/Final Year Project/models";TESSDATA_PATH="D:/Final Year Project/models/tessdata";WHISPER_MODEL_PATH="D:/Final Year Project/third_party/whisper.cpp/models/ggml-small.en.bin";HAVE_TESSERACT=1;HAVE_ONNXRUNTIME=1;HAS_WHISPER=1;HAVE_PORTAUDIO=1;USE_LIBSAMPLERATE=1;USE_CUDA;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;USE_CUDA=1;GLFW_DLL;TESS_IMPORTS;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;CLI11_COMPILE;GGML_USE_CPU;GGML_SHARED;GGML_BACKEND_SHARED;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;MODELS_PATH=\"D:/Final Year Project/models\";TESSDATA_PATH=\"D:/Final Year Project/models/tessdata\";WHISPER_MODEL_PATH=\"D:/Final Year Project/third_party/whisper.cpp/models/ggml-small.en.bin\";HAVE_TESSERACT=1;HAVE_ONNXRUNTIME=1;HAS_WHISPER=1;HAVE_PORTAUDIO=1;USE_LIBSAMPLERATE=1;USE_CUDA;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;USE_CUDA=1;GLFW_DLL;TESS_IMPORTS;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;CLI11_COMPILE;GGML_USE_CPU;GGML_SHARED;GGML_BACKEND_SHARED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\opencv4;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\opencv4;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>						Copying scripts and models to output directory</Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "D:/Final Year Project/deps/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary "D:/Final Year Project/build/bin/MinSizeRel/smart_glasses_hud.exe" -installedDir "D:/Final Year Project/deps/vcpkg/installed/x64-windows/bin" -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying ONNX Runtime GPU DLLs..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime_providers_cuda.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime_providers_shared.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy "D:/Final Year Project/Run_SmartGlassesHUD.ps1" "D:/Final Year Project/build/bin/MinSizeRel/Run_SmartGlassesHUD.ps1"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy "D:/Final Year Project/Run_SmartGlassesHUD.bat" "D:/Final Year Project/build/bin/MinSizeRel/Run_SmartGlassesHUD.bat"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying CUDA runtime DLLs for ORT GPU..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cudart64_12.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cublas64_12.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cublasLt64_12.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cufft64_11.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/curand64_10.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cusolver64_11.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cusparse64_12.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvrtc64_120_0.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvrtc-builtins64_126.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvJitLink_120_0.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying cuDNN DLLs for ORT GPU..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn64_9.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn_ops64_9.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn_cnn64_9.dll" "D:/Final Year Project/build/bin/MinSizeRel/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy_directory "D:/Final Year Project/scripts" "D:/Final Year Project/build/bin/MinSizeRel/scripts"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_directory "D:/Final Year Project/models" "D:/Final Year Project/build/bin/MinSizeRel/models"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_stitching4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_alphamat4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_aruco4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_bgsegm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_bioinspired4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_ccalib4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudabgsegm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudafeatures2d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaobjdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudastereo4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dnn_objdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dnn_superres4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dpm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_face4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_fuzzy4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_hfs4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_img_hash4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_intensity_transform4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_line_descriptor4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_mcc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_rapid4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_reg4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_saliency4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_signal4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_stereo4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_structured_light4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_superres4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_surface_matching4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_tracking4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_videostab4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_wechat_qrcode4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_xfeatures2d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_xobjdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_xphoto4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\glfw3dll.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\glad.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\glm.lib;opengl32.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\tesseract55.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\spdlog.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\cpr.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\libssl.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\libcrypto.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\sqlite3.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\zstd.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\CLI11.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\fmt.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\portaudio.lib;D:\Final Year Project\third_party\onnxruntime-cuda\lib\onnxruntime.lib;third_party\whisper.cpp\src\MinSizeRel\whisper.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cudart_static.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_shape4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_highgui4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_datasets4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_ml4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_plot4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_phase_unwrapping4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudacodec4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_videoio4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaoptflow4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudalegacy4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudawarping4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_optflow4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_ximgproc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_video4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_imgcodecs4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_objdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_calib3d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dnn4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_features2d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_flann4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_photo4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaimgproc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudafilters4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_imgproc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaarithm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_core4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudev4.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppial.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppitc.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppig.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppist.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppidei.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublasLt.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cufft.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppicc.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppif.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppim.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppc.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\freetype.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\archive.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\leptonica-1.87.0.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\libcurl.lib;winmm.lib;dsound.lib;ole32.lib;uuid.lib;setupapi.lib;ole32.lib;uuid.lib;setupapi.lib;third_party\whisper.cpp\ggml\src\MinSizeRel\ggml.lib;third_party\whisper.cpp\ggml\src\MinSizeRel\ggml-cpu.lib;third_party\whisper.cpp\ggml\src\MinSizeRel\ggml-base.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Final Year Project/build/MinSizeRel/smart_glasses_hud.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Final Year Project/build/bin/MinSizeRel/smart_glasses_hud.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include/opencv4" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/include" /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include" /external:I "D:/Final Year Project/deps/vcpkg/installed/x64-windows/include/eigen3" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;MODELS_PATH="D:/Final Year Project/models";TESSDATA_PATH="D:/Final Year Project/models/tessdata";WHISPER_MODEL_PATH="D:/Final Year Project/third_party/whisper.cpp/models/ggml-small.en.bin";HAVE_TESSERACT=1;HAVE_ONNXRUNTIME=1;HAS_WHISPER=1;HAVE_PORTAUDIO=1;USE_LIBSAMPLERATE=1;USE_CUDA;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;USE_CUDA=1;GLFW_DLL;TESS_IMPORTS;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;CLI11_COMPILE;GGML_USE_CPU;GGML_SHARED;GGML_BACKEND_SHARED;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;MODELS_PATH=\"D:/Final Year Project/models\";TESSDATA_PATH=\"D:/Final Year Project/models/tessdata\";WHISPER_MODEL_PATH=\"D:/Final Year Project/third_party/whisper.cpp/models/ggml-small.en.bin\";HAVE_TESSERACT=1;HAVE_ONNXRUNTIME=1;HAS_WHISPER=1;HAVE_PORTAUDIO=1;USE_LIBSAMPLERATE=1;USE_CUDA;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;USE_CUDA=1;GLFW_DLL;TESS_IMPORTS;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;CLI11_COMPILE;GGML_USE_CPU;GGML_SHARED;GGML_BACKEND_SHARED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\opencv4;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Final Year Project\include;D:\Final Year Project\third_party\onnxruntime-cuda\include;D:\Final Year Project\third_party\imgui;D:\Final Year Project\third_party\imgui\backends;D:\Final Year Project\third_party\whisper.cpp\include;D:\Final Year Project\third_party\whisper.cpp\src\.;D:\Final Year Project\third_party\whisper.cpp\src\..\include;D:\Final Year Project\third_party\whisper.cpp\ggml\src\..\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\opencv4;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include;D:\Final Year Project\deps\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>						Copying scripts and models to output directory</Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "D:/Final Year Project/deps/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary "D:/Final Year Project/build/bin/RelWithDebInfo/smart_glasses_hud.exe" -installedDir "D:/Final Year Project/deps/vcpkg/installed/x64-windows/bin" -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying ONNX Runtime GPU DLLs..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime_providers_cuda.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "D:/Final Year Project/third_party/onnxruntime-cuda/lib/onnxruntime_providers_shared.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy "D:/Final Year Project/Run_SmartGlassesHUD.ps1" "D:/Final Year Project/build/bin/RelWithDebInfo/Run_SmartGlassesHUD.ps1"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy "D:/Final Year Project/Run_SmartGlassesHUD.bat" "D:/Final Year Project/build/bin/RelWithDebInfo/Run_SmartGlassesHUD.bat"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying CUDA runtime DLLs for ORT GPU..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cudart64_12.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cublas64_12.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cublasLt64_12.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cufft64_11.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/curand64_10.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cusolver64_11.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/cusparse64_12.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvrtc64_120_0.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvrtc-builtins64_126.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin/nvJitLink_120_0.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E echo "Copying cuDNN DLLs for ORT GPU..."
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn64_9.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn_ops64_9.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files/NVIDIA/CUDNN/v9.19/bin/12.9/x64/cudnn_cnn64_9.dll" "D:/Final Year Project/build/bin/RelWithDebInfo/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\New folder\CMake\bin\cmake.exe" -E copy_directory "D:/Final Year Project/scripts" "D:/Final Year Project/build/bin/RelWithDebInfo/scripts"
+if %errorlevel% neq 0 goto :cmEnd
+"D:\New folder\CMake\bin\cmake.exe" -E copy_directory "D:/Final Year Project/models" "D:/Final Year Project/build/bin/RelWithDebInfo/models"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_stitching4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_alphamat4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_aruco4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_bgsegm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_bioinspired4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_ccalib4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudabgsegm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudafeatures2d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaobjdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudastereo4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dnn_objdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dnn_superres4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dpm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_face4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_fuzzy4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_hfs4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_img_hash4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_intensity_transform4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_line_descriptor4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_mcc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_rapid4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_reg4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_saliency4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_signal4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_stereo4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_structured_light4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_superres4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_surface_matching4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_tracking4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_videostab4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_wechat_qrcode4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_xfeatures2d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_xobjdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_xphoto4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\glfw3dll.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\glad.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\glm.lib;opengl32.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\tesseract55.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\spdlog.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\cpr.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\libssl.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\libcrypto.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\sqlite3.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\zstd.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\CLI11.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\fmt.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\portaudio.lib;D:\Final Year Project\third_party\onnxruntime-cuda\lib\onnxruntime.lib;third_party\whisper.cpp\src\RelWithDebInfo\whisper.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cudart_static.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_shape4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_highgui4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_datasets4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_ml4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_plot4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_phase_unwrapping4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudacodec4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_videoio4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaoptflow4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudalegacy4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudawarping4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_optflow4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_ximgproc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_video4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_imgcodecs4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_objdetect4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_calib3d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_dnn4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_features2d4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_flann4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_photo4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaimgproc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudafilters4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_imgproc4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudaarithm4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_core4.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\opencv_cudev4.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppial.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppitc.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppig.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppist.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppidei.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublasLt.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cufft.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppicc.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppif.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppim.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\nppc.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\freetype.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\archive.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\leptonica-1.87.0.lib;D:\Final Year Project\deps\vcpkg\installed\x64-windows\lib\libcurl.lib;winmm.lib;dsound.lib;ole32.lib;uuid.lib;setupapi.lib;ole32.lib;uuid.lib;setupapi.lib;third_party\whisper.cpp\ggml\src\RelWithDebInfo\ggml.lib;third_party\whisper.cpp\ggml\src\RelWithDebInfo\ggml-cpu.lib;third_party\whisper.cpp\ggml\src\RelWithDebInfo\ggml-base.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Final Year Project/build/RelWithDebInfo/smart_glasses_hud.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Final Year Project/build/bin/RelWithDebInfo/smart_glasses_hud.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Final Year Project\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Final Year Project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"D:\New folder\CMake\bin\cmake.exe" "-SD:/Final Year Project" "-BD:/Final Year Project/build" --check-stamp-file "D:/Final Year Project/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeCXXCompiler.cmake;D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeRCCompiler.cmake;D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeSystem.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\BuildFlatBuffers.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatcTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatcTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\flatbuffers-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\flatbuffers-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaConfig-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\libarchive\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVConfig-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-generate.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-module.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-options.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tiff\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets.cmake;D:\Final Year Project\deps\vcpkg\scripts\buildsystems\vcpkg.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeCXXInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeCommonLanguageInclude.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeDependentOption.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeFindDependencyMacro.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeGenericSystem.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeInitializeConfigs.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeLanguageInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeRCInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInitialize.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckCXXSourceCompiles.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckIncludeFileCXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDA.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDA\select_compute_arch.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDAToolkit.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindLibArchive.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindOpenSSL.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindTIFF.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindThreads.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindZLIB.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Linker\MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Linker\MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-Initialize.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\WindowsPaths.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\SelectLibraryConfigurations.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Final Year Project\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Final Year Project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"D:\New folder\CMake\bin\cmake.exe" "-SD:/Final Year Project" "-BD:/Final Year Project/build" --check-stamp-file "D:/Final Year Project/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeCXXCompiler.cmake;D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeRCCompiler.cmake;D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeSystem.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\BuildFlatBuffers.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatcTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatcTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\flatbuffers-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\flatbuffers-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaConfig-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\libarchive\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVConfig-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-generate.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-module.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-options.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tiff\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets.cmake;D:\Final Year Project\deps\vcpkg\scripts\buildsystems\vcpkg.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeCXXInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeCommonLanguageInclude.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeDependentOption.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeFindDependencyMacro.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeGenericSystem.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeInitializeConfigs.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeLanguageInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeRCInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInitialize.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckCXXSourceCompiles.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckIncludeFileCXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDA.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDA\select_compute_arch.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDAToolkit.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindLibArchive.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindOpenSSL.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindTIFF.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindThreads.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindZLIB.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Linker\MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Linker\MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-Initialize.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\WindowsPaths.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\SelectLibraryConfigurations.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Final Year Project\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Final Year Project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"D:\New folder\CMake\bin\cmake.exe" "-SD:/Final Year Project" "-BD:/Final Year Project/build" --check-stamp-file "D:/Final Year Project/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeCXXCompiler.cmake;D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeRCCompiler.cmake;D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeSystem.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\BuildFlatBuffers.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatcTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatcTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\flatbuffers-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\flatbuffers-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaConfig-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\libarchive\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVConfig-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-generate.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-module.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-options.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tiff\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets.cmake;D:\Final Year Project\deps\vcpkg\scripts\buildsystems\vcpkg.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeCXXInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeCommonLanguageInclude.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeDependentOption.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeFindDependencyMacro.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeGenericSystem.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeInitializeConfigs.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeLanguageInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeRCInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInitialize.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckCXXSourceCompiles.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckIncludeFileCXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDA.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDA\select_compute_arch.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDAToolkit.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindLibArchive.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindOpenSSL.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindTIFF.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindThreads.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindZLIB.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Linker\MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Linker\MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-Initialize.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\WindowsPaths.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\SelectLibraryConfigurations.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Final Year Project\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Final Year Project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"D:\New folder\CMake\bin\cmake.exe" "-SD:/Final Year Project" "-BD:/Final Year Project/build" --check-stamp-file "D:/Final Year Project/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeCXXCompiler.cmake;D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeRCCompiler.cmake;D:\Final Year Project\build\CMakeFiles\4.2.3\CMakeSystem.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\SampleRate\SampleRateTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\WebP\WebPTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\absl\abslTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cli11\CLI11ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\cpr\cprTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\CURLTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\curl\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\BuildFlatBuffers.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatBuffersTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatcTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\FlatcTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\flatbuffers-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\flatbuffers\flatbuffers-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\freetype-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\freetype\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\glm\glmConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaConfig-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\leptonica\LeptonicaTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\libarchive\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nanoflann\nanoflannTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVConfig-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\opencv4\OpenCVModules.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openjpeg\OpenJPEGTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\portaudio\portaudioTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-config-version.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-generate.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-module.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-options.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\protobuf-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\protobuf\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\quirc\quirc-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tesseract\TesseractTargets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\tiff\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\unofficial-sqlite3\unofficial-sqlite3-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-config.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\utf8_range\utf8_range-targets.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdConfig.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdConfigVersion.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets-debug.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets-release.cmake;D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\zstd\zstdTargets.cmake;D:\Final Year Project\deps\vcpkg\scripts\buildsystems\vcpkg.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeCXXInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeCommonLanguageInclude.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeDependentOption.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeFindDependencyMacro.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeGenericSystem.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeInitializeConfigs.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeLanguageInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeRCInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInitialize.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckCXXSourceCompiles.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckIncludeFileCXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Compiler\MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDA.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDA\select_compute_arch.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindCUDAToolkit.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindLibArchive.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindOpenSSL.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindTIFF.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindThreads.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\FindZLIB.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Linker\MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Linker\MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-Initialize.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-CXX.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\Windows.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\Platform\WindowsPaths.cmake;D:\New folder\CMake\share\cmake-4.2\Modules\SelectLibraryConfigurations.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Final Year Project\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Final Year Project\src\AudioCapture.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\CameraManager.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\Config.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\FaceDetector.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\HUDLayer.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\ModelRegistry.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\OCREngine.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\OnnxDetector.cpp">
+      <ObjectFileName>$(IntDir)/src/OnnxDetector.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\Final Year Project\src\Pipeline.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\PythonBridge.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\ResultsStore.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\STTEngine.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\SignLanguageDetector.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\SignLanguageTranslator.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\SpeechService.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\TTSEngine.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\TTSQueue.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\TTSService.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\TranslationEngine.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\TranslationQueue.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\TranslationTaskManager.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\VoiceAssistMode.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\camera\camera_manager.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\face\face_detector.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\face\face_encoder.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\face\identity_store.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\hud\hud_layer.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\hud\voice_assist.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\main.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\object\ObjectRegistry.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\object\OnnxDetector.cpp">
+      <ObjectFileName>$(IntDir)/src/object/OnnxDetector.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\Final Year Project\src\object\object_detector.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\object\object_store.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\ocr\ocr_engine.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\speech\stt_engine.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\speech\tts_engine.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\translation\translation_manager.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\utils\image_utils.cpp" />
+    <ClCompile Include="D:\Final Year Project\src\utils\ort_session.cpp" />
+    <ClCompile Include="D:\Final Year Project\third_party\imgui\imgui.cpp" />
+    <ClCompile Include="D:\Final Year Project\third_party\imgui\imgui_draw.cpp" />
+    <ClCompile Include="D:\Final Year Project\third_party\imgui\imgui_tables.cpp" />
+    <ClCompile Include="D:\Final Year Project\third_party\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="D:\Final Year Project\third_party\imgui\imgui_demo.cpp" />
+    <ClCompile Include="D:\Final Year Project\third_party\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="D:\Final Year Project\third_party\imgui\backends\imgui_impl_opengl3.cpp" />
+    <Natvis Include="D:\Final Year Project\deps\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis">
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\Final Year Project\build\ZERO_CHECK.vcxproj">
+      <Project>{8B6CC24D-B941-3A6F-A5DF-94193A7FF5A2}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml.vcxproj">
+      <Project>{9AF66450-F725-3AEB-BA85-FE03BCEAAB44}</Project>
+      <Name>ggml</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-base.vcxproj">
+      <Project>{CBBA3E68-D93D-3D3A-BAB5-7CFEA5819FA6}</Project>
+      <Name>ggml-base</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-cpu.vcxproj">
+      <Project>{9CC1A9A2-11C9-3F10-B157-0E0322FD86CA}</Project>
+      <Name>ggml-cpu</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Final Year Project\build\third_party\whisper.cpp\src\whisper.vcxproj">
+      <Project>{94006741-C428-30E1-8810-3F757A3BDAFC}</Project>
+      <Name>whisper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,16 @@
+D:/Final Year Project/build/CMakeFiles/smart_glasses_hud.dir
+D:/Final Year Project/build/CMakeFiles/object_detection_verify.dir
+D:/Final Year Project/build/CMakeFiles/INSTALL.dir
+D:/Final Year Project/build/CMakeFiles/ALL_BUILD.dir
+D:/Final Year Project/build/CMakeFiles/ZERO_CHECK.dir
+D:/Final Year Project/build/third_party/whisper.cpp/CMakeFiles/INSTALL.dir
+D:/Final Year Project/build/third_party/whisper.cpp/CMakeFiles/ALL_BUILD.dir
+D:/Final Year Project/build/third_party/whisper.cpp/ggml/CMakeFiles/INSTALL.dir
+D:/Final Year Project/build/third_party/whisper.cpp/ggml/CMakeFiles/ALL_BUILD.dir
+D:/Final Year Project/build/third_party/whisper.cpp/ggml/src/CMakeFiles/ggml-base.dir
+D:/Final Year Project/build/third_party/whisper.cpp/ggml/src/CMakeFiles/ggml.dir
+D:/Final Year Project/build/third_party/whisper.cpp/ggml/src/CMakeFiles/ggml-cpu.dir
+D:/Final Year Project/build/third_party/whisper.cpp/ggml/src/CMakeFiles/INSTALL.dir
+D:/Final Year Project/build/third_party/whisper.cpp/ggml/src/ggml-cpu/CMakeFiles/INSTALL.dir
+D:/Final Year Project/build/third_party/whisper.cpp/src/CMakeFiles/whisper.dir
+D:/Final Year Project/build/third_party/whisper.cpp/src/CMakeFiles/INSTALL.dir

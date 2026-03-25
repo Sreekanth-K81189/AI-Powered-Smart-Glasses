@@ -1,0 +1,7 @@
+# Smart Glasses HUD — Python dependencies
+# Install: pip install -r requirements.txt
+speechrecognition>=3.10.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+opencv-python>=4.8.0
+pyttsx3>=2.90
