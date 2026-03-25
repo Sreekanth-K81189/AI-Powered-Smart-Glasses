@@ -1,5 +1,0 @@
-# Place model weights here (or in build/bin/Release/models/ when running from build):
-#   Object detection:  yolo/yolov8x_fp16.onnx
-#   OCR:               tessdata/  (e.g. eng.traineddata)
-#   Face (fallback):    face/haarcascade_frontalface_default.xml  (or ResNet deploy.prototxt + .caffemodel)
-#   Text regions:       frozen_east_text_detection.pb

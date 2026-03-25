@@ -26,3 +26,7 @@ CMakeFiles/
 
 # Whisper compiled binaries (submodule handles source)
 third_party/whisper.cpp/build/
+
+build/
+deps/
+*.zip

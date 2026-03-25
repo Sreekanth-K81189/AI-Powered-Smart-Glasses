@@ -1,1 +1,0 @@
-D:/Final Year Project/build/third_party/whisper.cpp/src/whisper.dir/Debug/whisper.obj

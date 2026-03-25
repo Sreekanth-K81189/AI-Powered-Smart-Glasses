@@ -1,8 +1,0 @@
-D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml.c;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-base.dir\Release\ggml.c.obj
-D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-base.dir\Release\ggml.cpp.obj
-D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-alloc.c;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-base.dir\Release\ggml-alloc.obj
-D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-backend.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-base.dir\Release\ggml-backend.obj
-D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-opt.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-base.dir\Release\ggml-opt.obj
-D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-threading.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-base.dir\Release\ggml-threading.obj
-D:\Final Year Project\third_party\whisper.cpp\ggml\src\ggml-quants.c;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-base.dir\Release\ggml-quants.obj
-D:\Final Year Project\third_party\whisper.cpp\ggml\src\gguf.cpp;D:\Final Year Project\build\third_party\whisper.cpp\ggml\src\ggml-base.dir\Release\gguf.obj
